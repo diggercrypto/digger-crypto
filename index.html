@@ -3,66 +3,81 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PARASITA Ecosystem - Self-Funding Financial Protocol</title>
+    <title>PARASITA Ecosystem - Self-Funding DeFi on Polygon</title>
     <style>
-        /* Modern, professional dark mode style */
+        /* CSS per il design Black/Lime professionale */
         body { 
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
             line-height: 1.6; 
             margin: 0; 
             padding: 0;
             color: #E0E0E0; 
-            background-color: #121212; 
+            background-color: #000000; /* Fondo Nero Puro */
         }
         .container { 
-            max-width: 1100px; 
-            margin: 40px auto; 
-            background: #1E1E1E; 
-            padding: 40px; 
-            border-radius: 12px; 
-            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4); 
+            max-width: 1200px; 
+            margin: 0 auto; 
+            background: #111111; /* Sfondo Grigio Scuro */
+            padding: 50px; 
+            border-radius: 0; 
+            box-shadow: 0 0 50px rgba(0, 255, 0, 0.1); /* Leggera Ombra Verde */
+        }
+        header {
+            background-color: #000000;
+            color: #E0E0E0;
+            padding: 40px 0;
+            margin-bottom: 40px;
+            border-bottom: 5px solid #00FF00; /* Linea verde lime */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+        .logo-icon {
+            font-size: 4em;
+            color: #00FF00;
+            margin-right: 20px;
         }
         h1 { 
-            color: #4CAF50; 
-            border-bottom: 3px solid #4CAF50; 
-            padding-bottom: 15px; 
-            margin-bottom: 25px; 
-            text-align: center;
-            font-size: 2.5em;
+            font-size: 3em;
+            margin: 0;
+            color: #00FF00; 
+            font-weight: 300;
+            letter-spacing: 2px;
         }
         h2 { 
-            color: #BBDEFB; 
-            margin-top: 40px; 
-            padding-bottom: 8px; 
-            border-bottom: 1px solid #333; 
-            font-size: 1.8em;
+            color: #E0E0E0; 
+            margin-top: 35px; 
+            padding-bottom: 10px; 
+            border-bottom: 2px solid #333; 
+            font-size: 2em;
+            font-weight: 500;
         }
         h3 { 
-            color: #A5D6A7; 
+            color: #00FF00; 
             margin-top: 25px; 
+            font-size: 1.4em;
         }
-        .justification, .investment-focus { 
-            background: #252525; 
-            padding: 20px; 
-            border-left: 5px solid #4CAF50; 
-            margin-top: 20px; 
-            font-style: italic; 
-            border-radius: 6px; 
+        p, li {
+            color: #CCCCCC;
         }
-        .token-section {
-            display: flex;
-            gap: 30px;
-            margin-top: 30px;
-            flex-wrap: wrap; 
+        .section-box { 
+            background: #181818; 
+            padding: 30px; 
+            margin-bottom: 30px; 
+            border-left: 3px solid #00FF00; 
+            border-radius: 4px; 
         }
-        .token-info, .token-chart {
-            flex: 1;
-            min-width: 300px; 
+        .token-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            margin-top: 20px;
         }
         .chart-placeholder iframe {
             width: 100%;
-            height: 400px;
-            border: none;
+            height: 450px;
+            border: 1px solid #333;
             border-radius: 4px;
         }
         .resources-table { 
@@ -74,116 +89,138 @@
             border: 1px solid #333; 
             padding: 15px; 
             text-align: left; 
+            font-family: monospace;
         }
         .resources-table th { 
-            background-color: #252525; 
+            background-color: #00FF00; 
+            color: #000000;
             font-weight: bold; 
-            color: #E0E0E0;
+            text-transform: uppercase;
         }
-        ul { list-style-type: disc; margin-left: 20px; }
+        .resources-table td {
+            color: #00FF00;
+        }
+        .theory-box {
+            background: #000000;
+            padding: 20px;
+            border: 2px dashed #00FF00;
+            margin-top: 25px;
+        }
+
+        /* Responsive design */
+        @media (max-width: 900px) {
+            .token-grid {
+                grid-template-columns: 1fr;
+            }
+            .container {
+                padding: 20px;
+            }
+        }
         
     </style>
 </head>
 <body>
 
 <div class="container">
-    <h1>PARASITA ECOSYSTEM: Self-Funding DeFi on Polygon</h1>
+    <header>
+        <div class="logo-icon">&#9881;</div> <div>
+            <h1>PARASITA Ecosystem</h1>
+            <p>Self-Funding DeFi Protocol on Polygon</p>
+        </div>
+    </header>
     
-    <div class="justification">
-        <h2>Compliance Statement & Name Justification</h2>
-        <p>The **PARASITA Protocol** name is chosen as a metaphor for a self-sustaining financial mechanism. Analogous to an economic parasite, the protocol transparently utilizes its own trading volume through a **Tribute (Tax)** to generate internal liquidity (Owner Fee) for strategic operations and funding, ensuring perpetual scarcity via **Burn** (1.5%). This structure is designed for efficiency and independence on the Polygon Network.</p>
+    <div class="section-box">
+        <h2>Statement of Compliance & Governance</h2>
+        <p>The **PARASITA Protocol** is a rigorously designed financial model operating as a DAO's treasury mechanism. The name is a metaphor for a self-sustaining system: it extracts a necessary **Tribute (Tax)** from its own volume to generate continuous liquidity (Owner Fee) for strategic operations, ensuring perpetual deflationary pressure via **Burn**. This structure ensures independence and capital efficiency on the Polygon Network.</p>
     </div>
 
-    <h2>1. PARASITA Protocol ($PARASITA$)</h2>
-    
-    <div class="token-section">
-        <div class="token-info">
-            <h3>Utility and Core Function: The Tribute Engine</h3>
-            <p>PARASITA è il nucleo deflazionistico dell'ecosistema. La sua tassa obbligatoria del 3% sulle transazioni è divisa:</p>
-            <ul>
-                <li>**1.5% Owner Fee (Treasury):** Dedicated to funding proprietary algorithmic trading strategies (managed by bots like *ChaosProbabilityTradingBot* and *TeoriaDelCaosBot*) and market stability operations.</li>
-                <li>**1.5% Burn Fee (Deflation):** Permanently removed from circulation, continuously enhancing token scarcity.</li>
-            </ul>
-        </div>
-        <div class="token-chart">
-            <h3>Live Trading Chart: $PARASITA$</h3>
+    <div class="section-box">
+        <h2>1. PARASITA Protocol ($PARASITA$) - The Deflationary Core</h2>
+        <div class="token-grid">
+            <div>
+                <h3>Utility and Mechanism: The Tribute Engine</h3>
+                <p>PARASITA is the deflationary foundation of the ecosystem. Its mandatory **3% transaction fee** is split into two critical streams:</p>
+                <ul>
+                    <li>**1.5% Owner Fee (Treasury):** This fee is dedicated exclusively to funding proprietary algorithmic trading and market-making strategies (managed by bots like *ChaosProbabilityTradingBot* and *TeoriaDelCaosBot*). This Treasury acts as the self-funding mechanism for the entire ecosystem.</li>
+                    <li>**1.5% Burn Fee (Deflation):** This portion is permanently removed from circulation with every transaction, ensuring a continuous and verifiable decrease in total supply, which is key to its deflationary structure.</li>
+                </ul>
+            </div>
             <div class="chart-placeholder">
+                <h3>Live Chart: $PARASITA$</h3>
                 <iframe src="https://coinbrain.com/embed/chart/polygon/0x401cd9b24A3940333057242485fDed833A04ad52" frameborder="0" allowfullscreen></iframe>
             </div>
         </div>
     </div>
-    
-    <h2>2. Mama Coco Meme Coin ($MAMACOCO$)</h2>
-    
-    <div class="token-section">
-        <div class="token-info">
-            <h3>Utility and Role: The Liquidity Bridge</h3>
-            <p>MAMACOCO serves as the primary *utility token* for the ecosystem, focused on liquidity and capital efficiency:</p>
-            <ul>
-                <li>**Liquidity Bridge:** MAMACOCO is the paired asset in the main LP pool with PARASITA, providing deep liquidity and facilitating robust exchange rates.</li>
-                <li>**Staking & Vault Utility (Future):** Planned for integration into staking and yield generation vaults to reward long-term holders.</li>
-                <li>**Financial Gateway:** Acts as the primary mechanism for the PARASITA Treasury to execute *buyback* and *liquidity management* operations.</li>
-            </ul>
-        </div>
-        <div class="token-chart">
-            <h3>Live Trading Chart: $MAMACOCO$</h3>
+
+    <div class="section-box">
+        <h2>2. Mama Coco Meme Coin ($MAMACOCO$) - The Liquidity Bridge</h2>
+        <div class="token-grid">
             <div class="chart-placeholder">
-                <iframe src="https://coinbrain.com/embed/chart/polygon/0x77Ab934b3f07FDfb1E14e223F2A73C69196B61d7" frameborder="0" allowfullscreen></iframe>
+                <h3>Live Chart: $MAMACOCO$</h3>
+                 <iframe src="https://coinbrain.com/embed/chart/polygon/0x77Ab934b3f07FDfb1E14e223F2A73C69196B61d7" frameborder="0" allowfullscreen></iframe>
+            </div>
+            <div>
+                <h3>Utility and Role: Liquidity and Vaults</h3>
+                <p>MAMACOCO serves as the primary *utility token* for the PARASITA ecosystem, designed to bridge liquidity and enable governance:</p>
+                <ul>
+                    <li>**Primary Pairing Asset:** MAMACOCO is the required paired asset in the main PARASITA/MAMACOCO LP pool, providing the deep liquidity necessary for robust exchange rates and stable trading.</li>
+                    <li>**Farming & Staking:** Its primary future utility is integration into staking and yield generation vaults, offering rewards to long-term holders and increasing capital lock-up.</li>
+                    <li>**Treasury Gateway:** It is the primary asset the PARASITA Treasury uses to execute strategic buybacks and stabilize the LP price, creating a financial loop.</li>
+                </ul>
             </div>
         </div>
     </div>
-    
-    <h2>3. LP Pool & Future Investment Focus</h2>
 
-    <div class="token-section">
-        <div class="token-info">
-            <h3>LP Pool: PARASITA / MAMACOCO Liquidity Actions</h3>
-            <p>The coupling of the two tokens ensures a closed financial loop. All trading actions (including ApeSwap) are linked to this pool, meaning PARASITA's generated Treasury is used to reinforce MAMACOCO's price and vice-versa, creating an auto-balancing, self-sustaining system.</p>
-        </div>
-        <div class="token-chart">
-            <h3>ApeSwap Liquidity Chart</h3>
+    <div class="section-box">
+        <h2>3. The Ecosystem Foundation: LP and Theory of the Radice (Root Theory)</h2>
+        <div class="token-grid">
+            <div>
+                <h3>The Root Theory: Self-Sustaining Mechanics</h3>
+                <div class="theory-box">
+                    <p>La **Teoria della Radice** descrive come l'ecosistema si auto-finanzia. PARASITA è la *radice* (radice) che estrae nutrimento (la tassa) dal terreno (il volume di trading). Questo nutrimento è convertito in stabilità e crescita per il *frutto* (MAMACOCO) tramite operazioni di *buyback* e fornitura di liquidità. </p>
+                    <ul>
+                        <li>**Ciclo di Nutrizione:** La Treasury di PARASITA (Tribute) viene utilizzata per l'investimento, rafforzando il valore e la liquidità di MAMACOCO.</li>
+                        <li>**Stabilità:** MAMACOCO viene poi riutilizzato per mantenere la liquidità del *pair* PARASITA/MAMACOCO (APE-LP), garantendo che la "radice" abbia un terreno stabile in cui crescere.</li>
+                        <li>**Logica:** Entrambi i token operano con questa logica di interdipendenza: la domanda di PARASITA finanzia il sostegno di MAMACOCO, la cui liquidità sostiene il trading di PARASITA.</li>
+                    </ul>
+                </div>
+            </div>
             <div class="chart-placeholder">
+                <h3>ApeSwap LP Chart: $PARASITA$ / $MAMACOCO$</h3>
                 <iframe src="https://coinbrain.com/embed/chart/polygon/0xE63cDbAAC82A48fBC9BcE08F81C14375481d0819" frameborder="0" allowfullscreen></iframe>
             </div>
         </div>
     </div>
-
-    <div class="investment-focus">
-        <h2>Investment Focus & Professional Roadmap</h2>
-        <ol>
-            <li>**Algorithmic Treasury Management:** Fully deploy proprietary *Market Making* systems to maximize returns and efficiently stabilize token prices.</li>
-            <li>**MAMACOCO Utility Expansion:** Launch Staking/Farming vaults to increase the utility and demand for the MAMACOCO token.</li>
-            <li>**Security & Compliance:** Ongoing audits and compliance checks to maintain transparency and trustworthiness within the Polygon ecosystem.</li>
-        </ol>
+    
+    <div class="section-box">
+        <h2>Official Contract Resources & Compliance</h2>
+        <table class="resources-table">
+            <thead>
+                <tr>
+                    <th>Project / Resource</th>
+                    <th>Contract Address / Contact (Polygon)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>**PARASITA Protocol Contract**</td>
+                    <td><code>0x401cd9b24A3940333057242485fDed833A04ad52</code></td>
+                </tr>
+                <tr>
+                    <td>**MAMACOCO Token Contract**</td>
+                    <td><code>0x77Ab934b3f07FDfb1E14e223F2A73C69196B61d7</code></td>
+                </tr>
+                 <tr>
+                    <td>**Official LP Pool Contract (APE-LP)**</td>
+                    <td><code>0xE63cDbAAC82A48fBC9BcE08F81C14375481d0819</code></td>
+                </tr>
+                <tr>
+                    <td>**Official Compliance Contact**</td>
+                    <td><code>mamacocomemecoin@gmail.com</code></td>
+                </tr>
+            </tbody>
+        </table>
     </div>
-
-    <h2>Official Contract Resources</h2>
-    <table class="resources-table">
-        <thead>
-            <tr>
-                <th>Project / Resource</th>
-                <th>Data / Contact (Polygon)</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td><strong>PARASITA Protocol Contract</strong></td>
-                <td><code>0x401cd9b24A3940333057242485fDed833A04ad52</code></td>
-            </tr>
-            <tr>
-                <td><strong>MAMACOCO Token Contract</strong></td>
-                <td><code>0x77Ab934b3f07FDfb1E14e223F2A73C69196B61d7</code></td>
-            </tr>
-             <tr>
-                <td>**Official LP Pool Contract (APE-LP)**</td>
-                <td><code>0xE63cDbAAC82A48fBC9BcE08F81C14375481d0819</code></td>
-            </tr>
-            <tr>
-                <td>**Official Compliance Contact**</td>
-                <td><code>mamacocomemecoin@gmail.com</code></td>
-            </tr>
-        </tbody>
-    </table>
 </div>
 
 </body>
